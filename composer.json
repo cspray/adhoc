@@ -1,0 +1,21 @@
+{
+  "name": "cspray/adhoc",
+  "description": "A library to create adhoc properties and methods.",
+  "license": "MIT",
+  "require": {
+    "php": "~7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.8"
+  },
+  "autoload": {
+    "psr-0": {
+      "Cspray\\Adhoc": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "Cspray\\Adhoc\\Test": "test/"
+    }
+  }
+}

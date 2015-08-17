@@ -1,5 +1,8 @@
 # Adhoc
 
+[![Travis](https://img.shields.io/travis/cspray/adhoc.svg)]()
+[![GitHub license](https://img.shields.io/github/license/cspray/adhoc.svg)](http://opensource.org/licenses/MIT)
+
 A PHP library to setup adhoc properties and methods to a class at runtime.
 
 ## Installation

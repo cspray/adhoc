@@ -20,7 +20,7 @@ make this magic a little easier to work with.
 
 If you just need to get a static value...
 
-```php linenos
+```php 
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -39,7 +39,7 @@ echo $foo->foo; // 'bar'
 
 Or maybe some kind of callback is more up your alley...
 
-```php linenos
+```php 
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -62,7 +62,7 @@ echo $foo->foo; // 'foobar'
 
 We'll only invoke a passed value if it is a `Closure`, even if the value could otherwise be invoked.
 
-```php linenos
+```php 
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -81,7 +81,7 @@ echo $foo->foo; // 'count'
 
 Would be silly to support 'getter' and not 'setter'.
 
-```php linenos
+```php 
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -111,7 +111,7 @@ echo $foo->foo; // 'yep'
 
 Simple method just returning a static value...
 
-```php linenos
+```php 
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -130,7 +130,7 @@ echo $foo->foo(); // 'bar'
 
 And of course you can pass in a Closure...
 
-```php linenos
+```php 
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -151,7 +151,7 @@ echo $foo->foo(); // 'bar'
 
 Arguments are supported, naturally.
 
-```php linenos
+```php 
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';

@@ -85,4 +85,17 @@ class PropertyTest extends UnitTestCase {
         $this->assertSame($passedArg, 'value');
     }
 
+    public function testSettingPropertyHasAccessToCallingClass() {
+        $stub = new PropertyStub();
+
+        $inner = null;
+        $stub->adhocSetter('foo', function($val) use(&$inner) {
+            $inner = $this->private;
+        });
+
+        $stub->foo = 'bar';
+
+        $this->assertSame('inside', $inner);
+    }
+
 }

@@ -98,4 +98,30 @@ class PropertyTest extends UnitTestCase {
         $this->assertSame('inside', $inner);
     }
 
+    public function testIssetPropertyNotSet() {
+        $stub = new PropertyStub();
+
+        $this->assertFalse(isset($stub->foo));
+    }
+
+    public function testIssetPropertySet() {
+        $stub = new PropertyStub();
+
+        $stub->adhocGetter('foo', function() {});
+
+        $this->assertTrue(isset($stub->foo));
+    }
+
+    public function testUnsetRemovesProperty() {
+        $stub = new PropertyStub();
+
+        $stub->adhocGetter('foo', function() {});
+
+        $this->assertTrue(isset($stub->foo));
+
+        unset($stub->foo);
+
+        $this->assertFalse(isset($stub->foo));
+    }
+
 }

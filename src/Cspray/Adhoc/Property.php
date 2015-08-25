@@ -58,4 +58,12 @@ trait Property {
         $this->_adhocProperties[$property]['set']->call($this, $val);
     }
 
+    public function __isset(string $property) {
+        return array_key_exists($property, $this->_adhocProperties);
+    }
+
+    public function __unset(string $property) {
+        unset($this->_adhocProperties[$property]);
+    }
+
 }
